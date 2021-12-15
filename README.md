@@ -1,21 +1,21 @@
-##MBTA Code Challenge
+## MBTA Code Challenge
 
-###Environment
+### Environment
 
 This code was written and compiled with Java 11. I used Jackson for JSON parsing, and JUnit for testing. Dependencies are
 managed with Maven.
 
-####Install and Run
+#### Install and Run
 
 The full package with dependencies bundled can be used via `maven package`. The `jar` can then be run from the command line
 with `java -cp target/Mbta-1.0-SNAPSHOT-jar-with-dependencies.jar mbta.App`. Tests can be run on their own with `mvn test`.
 
-####API Key
+#### API Key
 
 I did get an API key for the MBTA API, but this code will run without one defined. An environment variable `API_KEY` can 
 be set if desired. Since there is only one call to the API from the app, rate limiting is not an issue.
 
-####Challenge Requirements
+#### Challenge Requirements
 
 The three components of this project asked to query the MBTA API for light/heavy rail and then show various information.
 1) The `long_name` of each route
@@ -28,7 +28,7 @@ means that those stops that are on multiple branches of the Green Line and nothi
 I began to think about how to eliminate them by keeping track of the related name of the `line` object from the MBTA API, 
 which is how the API keeps track of this grouping, however that feature is not currently built.
 
-####Additional Notes
+#### Additional Notes
 
 This implementation also assumes the integrity of the data it gets from the API is good and does not check for malformed data.
 Further error handling could be improved upon and tested. It minimally makes sure the response code is 200 before reading
@@ -36,14 +36,14 @@ the JSON tree.
 
 Refactoring is always a work in progress, and I am still working to improve the code.
 
-###Considerations
+### Considerations
 
-####Strategy
+#### Strategy
 
 Given the static nature of the data in this project, and the relatively small size, my thoughts were to load all the JSON 
 data I needed into memory as objects and then manipulate them rather than having to repeatedly query the MBTA API.
 
-####Querying the Data
+#### Querying the Data
 
 I spent a bunch of time trying to figure out the optimal query/ies to perform to get the data necessary for this challenge.
 The proposal was to start with one of the following two queries:
@@ -73,7 +73,7 @@ After all of this, with a bit more understanding, I read a bit more on the devel
 includes. So I was able to collapse everything back into one query, even though I still had the issue with the `direction_id` 
 - but at least could then filter the route patterns and then the trips myself in order to set up my objects.
 
-####JSON Parsing
+#### JSON Parsing
 
 The MBTA API uses the JSON API and thus uses the `data`, `attributes`, `included`, etc., standards. The intention of this 
 exercise was to avoid a library that would just do everything for me (including linking includes), so I wanted to pick just 
@@ -85,7 +85,7 @@ use all the functionality. If I were using this in a more practical sense, I def
 worked better - but really, for what I was trying to do, and keep everything immutable, it was reasonably concise. I tried
 GSON at first, but being able to pass in a `JsonPointer` to Jackson was much more efficient.
 
-####Project Organization and Class Structure
+#### Project Organization and Class Structure
 
 My first thought here was to have an overarching object that contained the set of routes and set of stops, and then have
 the stops link back to the routes and the routes hold the stops in a list to keep the order. I realized quickly that the Red
@@ -115,9 +115,17 @@ sense to keep the object rather than deconstructing it. I've also had some thoug
 IDs ultimately for the purposes of this exercise. That being said, the IDs are useful if I had to make additional queries 
 to the API, so maybe it makes sense to keep them on the object in case further information was going to be retrieved. I tried
 to draw a fine line between eliminating information I don't need, but keeping enough around in case I decided to write more
-features myself.
+features myself. That also goes along with holding the route ID rather than the route name within the `MbtaStop` object - it
+may not make much of a difference here since it's not like it's a query on a database with an index. I could have gone either way
+most likely.
 
-####Immutability
+I also considered breaking out some of the logic from the `Mbta` object itself, and having it just contain the objects, rather than
+some of the methods performed - like the longest and shortest route calculations. Is that a job for the `Mbta` object itself, or is it
+up to the consumer to care and figure it out based on the object? Maybe if I had broken out the console interface into another class,
+it would have possibly made sense to have it do that calculation, but it didn't seem like it was the job of the main class to do that.
+Also, this keeps it more in line with OOP to calculate these items within the object.
+
+#### Immutability
 
 Trying to keep with the general principle of creating classes that are as immutable as possible, I worked to achieve that
 within this program. The various objects created from the query have no reason to change anyway, and the subsequent requirements
@@ -137,9 +145,9 @@ was easy enough to put together the route names in these cases before the creati
 stop object with just that information, even though it required holding onto that information in memory in a different map 
 until I knew I had gone through each route to check for duplicates. It also unfortunately forced me to cycle through the trips 
 twice, once to find the routes for each stop, and then a second to create the `MbtaStop` object itself. However, that is still
-a O(n) operation as it is still a fixed number of loops.
+a `O(n)` operation as it is still a fixed number of loops.
 
-####Search Algorithm for Finding the Path
+#### Search Algorithm for Finding the Path
 
 I wanted to find a path that makes some degree of sense, especially since many paths between two stops only require a single 
 transfer. All the main routes connect to each other except Red and Blue, and then Mattapan. So the longest route would be
@@ -155,9 +163,10 @@ the current paths worked well. I originally had a much more convoluted strategy 
 anything by doing that - I was holding even more objects in memory for something that I doubt was faster either. I thought 
 about holding the parent in memory for backtracking, but it also seemed like overkill. This is especially relevant because 
 I was only using the routes and not the stops themselves - so I essentially only had edges of a graph and not vertices. 
-That, along with the fact I had created the transfer map one time upon initializing the object, 
+That, along with the fact I had created the transfer map one time upon initializing the object, leads to the search algorithm
+performing very well (`O(|E|)`) given that there are only a handful of routes.
 
-####Testing
+#### Testing
 
 I thought hard about the best way to test the different components. Admittedly my test writing skills are still developing,
 but I wanted to make sure I tested at least the main functionality of the `Mbta` and `MbtaMapper` classes. Since the JSON 
@@ -165,9 +174,9 @@ coming in from the API is far more complicated than what I am using, I decided t
 file to test the mapper, and then I programmatically created most of the test objects to compare against, and then reused
 those objects to also test the `Mbta` class itself. I thought it would otherwise be very difficult and time-consuming to create
 the best JSON to test on, since I also wanted to test the filtering the mapper does, and thus didn't want to just hand it
-only data it would eventually turn into the POJOs.
+only data it would eventually turn into the POJOs. It maybe was not the most ideal way to test this out, but worked out alright.
 
-####Other Thoughts
+#### Other Thoughts
 
 At first, I wondered why the Green Line's various branches were considered separate routes, but that the standard Ashmont/Braintree 
 lines of the Red Line were considered the same route (but not Mattapan). Then it occurred to me that the main distinction 
@@ -183,4 +192,4 @@ if switching between branches.
 After all of this, I've started to wonder if I needed the path objects at all, even though I thought I did. I did need to keep
 separate paths for the Red Line branches, otherwise I would have no idea what the actual longest path is - the longest path
 on the Red Line does not constitute of all the stops contained within. However, maybe I could have just represented it as a set
-of lists as I don't hold other information about them at this time.
+of lists as I don't hold other information about them at this time. But I didn't want to lose the extensibility of the application either.
