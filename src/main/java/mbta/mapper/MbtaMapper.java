@@ -86,10 +86,6 @@ public class MbtaMapper {
         trips.forEach((route, routeTrips) -> routeTrips.forEach(node -> {
             JsonNode tripStops = node.at("/stops/data");
             List<String> stopList = tripStops.findValuesAsText("id");
-
-
-
-
             stopList.forEach(stop -> {
                 Set<String> parentRoutes = parentStationRoutes.computeIfAbsent(parentStations.get(stop), k -> new HashSet<>());
                 parentRoutes.add(route);
