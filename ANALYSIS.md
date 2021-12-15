@@ -32,8 +32,8 @@ first query, but even though I could filter on `direction_id`, that only applies
 to apply to the `included` items.
 
 After all of this, with a bit more understanding, I read a bit more on the developer site and realized I could add nested
-includes. So I was able to collapse everything back into one query, even though I still had the issue with the `direction_id`
-- but at least could then filter the route patterns and then the trips myself in order to set up my objects.
+includes. So I was able to collapse everything back into one query, even though I still had the issue with the `direction_id`, 
+but at least I could then filter the route patterns and then the trips myself in order to set up my objects.
 
 #### JSON Parsing
 
