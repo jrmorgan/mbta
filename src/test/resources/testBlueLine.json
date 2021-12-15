@@ -1,0 +1,1065 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "long_name": "Blue Line"
+      },
+      "id": "Blue",
+      "links": {
+        "self": "/routes/Blue"
+      },
+      "relationships": {
+        "line": {
+          "data": {
+            "id": "line-Blue",
+            "type": "line"
+          }
+        },
+        "route_patterns": {
+          "data": [
+            {
+              "id": "Blue-6-0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Blue-6-1",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Blue-8-0",
+              "type": "route_pattern"
+            }
+          ]
+        }
+      },
+      "type": "route"
+    }
+  ],
+  "included": [
+    {
+      "attributes": {},
+      "id": "49417902",
+      "links": {
+        "self": "/trips/49417902"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Blue-6-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "946_0013",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70059",
+              "type": "stop"
+            },
+            {
+              "id": "70057",
+              "type": "stop"
+            },
+            {
+              "id": "70055",
+              "type": "stop"
+            },
+            {
+              "id": "70053",
+              "type": "stop"
+            },
+            {
+              "id": "70051",
+              "type": "stop"
+            },
+            {
+              "id": "70049",
+              "type": "stop"
+            },
+            {
+              "id": "70047",
+              "type": "stop"
+            },
+            {
+              "id": "70045",
+              "type": "stop"
+            },
+            {
+              "id": "70043",
+              "type": "stop"
+            },
+            {
+              "id": "70041",
+              "type": "stop"
+            },
+            {
+              "id": "70039",
+              "type": "stop"
+            },
+            {
+              "id": "70838",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {},
+      "id": "49417953",
+      "links": {
+        "self": "/trips/49417953"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Blue-6-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "946_0014",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70038",
+              "type": "stop"
+            },
+            {
+              "id": "70040",
+              "type": "stop"
+            },
+            {
+              "id": "70042",
+              "type": "stop"
+            },
+            {
+              "id": "70044",
+              "type": "stop"
+            },
+            {
+              "id": "70046",
+              "type": "stop"
+            },
+            {
+              "id": "70048",
+              "type": "stop"
+            },
+            {
+              "id": "70050",
+              "type": "stop"
+            },
+            {
+              "id": "70052",
+              "type": "stop"
+            },
+            {
+              "id": "70054",
+              "type": "stop"
+            },
+            {
+              "id": "70056",
+              "type": "stop"
+            },
+            {
+              "id": "70058",
+              "type": "stop"
+            },
+            {
+              "id": "70060",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {},
+      "id": "49418125",
+      "links": {
+        "self": "/trips/49418125"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Blue-8-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "948_0005",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70051",
+              "type": "stop"
+            },
+            {
+              "id": "70049",
+              "type": "stop"
+            },
+            {
+              "id": "70047",
+              "type": "stop"
+            },
+            {
+              "id": "70045",
+              "type": "stop"
+            },
+            {
+              "id": "70043",
+              "type": "stop"
+            },
+            {
+              "id": "70041",
+              "type": "stop"
+            },
+            {
+              "id": "70039",
+              "type": "stop"
+            },
+            {
+              "id": "70838",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Bowdoin"
+      },
+      "id": "70038",
+      "links": {
+        "self": "/stops/70038"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70038"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-bomnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Government Center"
+      },
+      "id": "70039",
+      "links": {
+        "self": "/stops/70039"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70039"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-gover",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Government Center"
+      },
+      "id": "70040",
+      "links": {
+        "self": "/stops/70040"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70040"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-gover",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "State"
+      },
+      "id": "70041",
+      "links": {
+        "self": "/stops/70041"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70041"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-state",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "State"
+      },
+      "id": "70042",
+      "links": {
+        "self": "/stops/70042"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70042"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-state",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Aquarium"
+      },
+      "id": "70043",
+      "links": {
+        "self": "/stops/70043"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70043"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-aqucl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Aquarium"
+      },
+      "id": "70044",
+      "links": {
+        "self": "/stops/70044"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70044"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-aqucl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Maverick"
+      },
+      "id": "70045",
+      "links": {
+        "self": "/stops/70045"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70045"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-mvbcl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Maverick"
+      },
+      "id": "70046",
+      "links": {
+        "self": "/stops/70046"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70046"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-mvbcl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Airport"
+      },
+      "id": "70047",
+      "links": {
+        "self": "/stops/70047"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70047"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-aport",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Airport"
+      },
+      "id": "70048",
+      "links": {
+        "self": "/stops/70048"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70048"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-aport",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Wood Island"
+      },
+      "id": "70049",
+      "links": {
+        "self": "/stops/70049"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70049"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wimnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Wood Island"
+      },
+      "id": "70050",
+      "links": {
+        "self": "/stops/70050"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70050"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wimnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Orient Heights"
+      },
+      "id": "70051",
+      "links": {
+        "self": "/stops/70051"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70051"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-orhte",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Orient Heights"
+      },
+      "id": "70052",
+      "links": {
+        "self": "/stops/70052"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70052"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-orhte",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Suffolk Downs"
+      },
+      "id": "70053",
+      "links": {
+        "self": "/stops/70053"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70053"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-sdmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Suffolk Downs"
+      },
+      "id": "70054",
+      "links": {
+        "self": "/stops/70054"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70054"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-sdmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Beachmont"
+      },
+      "id": "70055",
+      "links": {
+        "self": "/stops/70055"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70055"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-bmmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Beachmont"
+      },
+      "id": "70056",
+      "links": {
+        "self": "/stops/70056"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70056"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-bmmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Revere Beach"
+      },
+      "id": "70057",
+      "links": {
+        "self": "/stops/70057"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70057"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-rbmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Revere Beach"
+      },
+      "id": "70058",
+      "links": {
+        "self": "/stops/70058"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70058"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-rbmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Wonderland"
+      },
+      "id": "70059",
+      "links": {
+        "self": "/stops/70059"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70059"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wondl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Wonderland"
+      },
+      "id": "70060",
+      "links": {
+        "self": "/stops/70060"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70060"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wondl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Bowdoin"
+      },
+      "id": "70838",
+      "links": {
+        "self": "/stops/70838"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70838"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-bomnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Wonderland - Bowdoin",
+        "sort_order": 10040000,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Blue-6-0",
+      "links": {
+        "self": "/route_patterns/Blue-6-0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49417902",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Bowdoin - Wonderland",
+        "sort_order": 10040100,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Blue-6-1",
+      "links": {
+        "self": "/route_patterns/Blue-6-1"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49417953",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Orient Heights - Bowdoin",
+        "sort_order": 10040004,
+        "time_desc": null,
+        "typicality": 3
+      },
+      "id": "Blue-8-0",
+      "links": {
+        "self": "/route_patterns/Blue-8-0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49418125",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Blue",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  }
+}

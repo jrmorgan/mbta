@@ -1,0 +1,2691 @@
+{
+  "data": [
+    {
+      "attributes": {
+        "long_name": "Red Line"
+      },
+      "id": "Red",
+      "links": {
+        "self": "/routes/Red"
+      },
+      "relationships": {
+        "line": {
+          "data": {
+            "id": "line-Red",
+            "type": "line"
+          }
+        },
+        "route_patterns": {
+          "data": [
+            {
+              "id": "Red-1-0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-1-0_70081_70085_0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-1-0_70081_70085_2",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-1-1",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-1-1_70086_70082_0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-1-1_70086_70082_2",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-0_70081_70095_0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-0_70081_70095_2",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-1",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-1_70096_70082_0",
+              "type": "route_pattern"
+            },
+            {
+              "id": "Red-3-1_70096_70082_2",
+              "type": "route_pattern"
+            }
+          ]
+        }
+      },
+      "type": "route"
+    }
+  ],
+  "included": [
+    {
+      "attributes": {
+        "name": "Porter"
+      },
+      "id": "70066",
+      "links": {
+        "self": "/stops/70066"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70066"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-portr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Savin Hill"
+      },
+      "id": "70088",
+      "links": {
+        "self": "/stops/70088"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70088"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-shmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Alewife - Ashmont",
+        "sort_order": 10010004,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Red-1-0",
+      "links": {
+        "self": "/route_patterns/Red-1-0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "48911570",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Davis"
+      },
+      "id": "70063",
+      "links": {
+        "self": "/stops/70063"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70063"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-davis",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Charles/MGH"
+      },
+      "id": "70074",
+      "links": {
+        "self": "/stops/70074"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70074"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-chmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "48911570",
+      "links": {
+        "self": "/trips/48911570"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0009",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70061",
+              "type": "stop"
+            },
+            {
+              "id": "70063",
+              "type": "stop"
+            },
+            {
+              "id": "70065",
+              "type": "stop"
+            },
+            {
+              "id": "70067",
+              "type": "stop"
+            },
+            {
+              "id": "70069",
+              "type": "stop"
+            },
+            {
+              "id": "70071",
+              "type": "stop"
+            },
+            {
+              "id": "70073",
+              "type": "stop"
+            },
+            {
+              "id": "70075",
+              "type": "stop"
+            },
+            {
+              "id": "70077",
+              "type": "stop"
+            },
+            {
+              "id": "70079",
+              "type": "stop"
+            },
+            {
+              "id": "70081",
+              "type": "stop"
+            },
+            {
+              "id": "70083",
+              "type": "stop"
+            },
+            {
+              "id": "70085",
+              "type": "stop"
+            },
+            {
+              "id": "70087",
+              "type": "stop"
+            },
+            {
+              "id": "70089",
+              "type": "stop"
+            },
+            {
+              "id": "70091",
+              "type": "stop"
+            },
+            {
+              "id": "70093",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Broadway"
+      },
+      "id": "70082",
+      "links": {
+        "self": "/stops/70082"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70082"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-brdwy",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Braintree"
+      },
+      "id": "70105",
+      "links": {
+        "self": "/stops/70105"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70105"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-brntn",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Alewife"
+      },
+      "id": "70061",
+      "links": {
+        "self": "/stops/70061"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70061"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-alfcl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Fields Corner"
+      },
+      "id": "70090",
+      "links": {
+        "self": "/stops/70090"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70090"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-fldcr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Braintree - JFK/UMass",
+        "sort_order": 10010199,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-3-1_70096_70082_0",
+      "links": {
+        "self": "/route_patterns/Red-3-1_70096_70082_0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258909-BroadwayJFK0",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Braintree - Alewife",
+        "sort_order": 10010105,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Red-3-1",
+      "links": {
+        "self": "/route_patterns/Red-3-1"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "48911678",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {},
+      "id": "49258737-BroadwayJFK2",
+      "links": {
+        "self": "/trips/49258737-BroadwayJFK2"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-1_70086_70082_2",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0010-70086-70082-2",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70082",
+              "type": "stop"
+            },
+            {
+              "id": "70080",
+              "type": "stop"
+            },
+            {
+              "id": "70078",
+              "type": "stop"
+            },
+            {
+              "id": "70076",
+              "type": "stop"
+            },
+            {
+              "id": "70074",
+              "type": "stop"
+            },
+            {
+              "id": "70072",
+              "type": "stop"
+            },
+            {
+              "id": "70070",
+              "type": "stop"
+            },
+            {
+              "id": "70068",
+              "type": "stop"
+            },
+            {
+              "id": "70066",
+              "type": "stop"
+            },
+            {
+              "id": "70064",
+              "type": "stop"
+            },
+            {
+              "id": "70061",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Park Street"
+      },
+      "id": "70076",
+      "links": {
+        "self": "/stops/70076"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70076"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-pktrm",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Kendall/MIT"
+      },
+      "id": "70071",
+      "links": {
+        "self": "/stops/70071"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70071"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-knncl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Wollaston"
+      },
+      "id": "70099",
+      "links": {
+        "self": "/stops/70099"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70099"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wlsta",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Andrew"
+      },
+      "id": "70083",
+      "links": {
+        "self": "/stops/70083"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70083"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-andrw",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Harvard"
+      },
+      "id": "70068",
+      "links": {
+        "self": "/stops/70068"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70068"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-harsq",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Downtown Crossing"
+      },
+      "id": "70077",
+      "links": {
+        "self": "/stops/70077"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70077"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-dwnxg",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "49258994-BroadwayJFK0",
+      "links": {
+        "self": "/trips/49258994-BroadwayJFK0"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-0_70081_70095_0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0009-70081-70095-0",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70061",
+              "type": "stop"
+            },
+            {
+              "id": "70063",
+              "type": "stop"
+            },
+            {
+              "id": "70065",
+              "type": "stop"
+            },
+            {
+              "id": "70067",
+              "type": "stop"
+            },
+            {
+              "id": "70069",
+              "type": "stop"
+            },
+            {
+              "id": "70071",
+              "type": "stop"
+            },
+            {
+              "id": "70073",
+              "type": "stop"
+            },
+            {
+              "id": "70075",
+              "type": "stop"
+            },
+            {
+              "id": "70077",
+              "type": "stop"
+            },
+            {
+              "id": "70079",
+              "type": "stop"
+            },
+            {
+              "id": "70081",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Davis"
+      },
+      "id": "70064",
+      "links": {
+        "self": "/stops/70064"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70064"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-davis",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Porter"
+      },
+      "id": "70065",
+      "links": {
+        "self": "/stops/70065"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70065"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-portr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Ashmont"
+      },
+      "id": "70094",
+      "links": {
+        "self": "/stops/70094"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70094"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-asmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "48911785",
+      "links": {
+        "self": "/trips/48911785"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0009",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70061",
+              "type": "stop"
+            },
+            {
+              "id": "70063",
+              "type": "stop"
+            },
+            {
+              "id": "70065",
+              "type": "stop"
+            },
+            {
+              "id": "70067",
+              "type": "stop"
+            },
+            {
+              "id": "70069",
+              "type": "stop"
+            },
+            {
+              "id": "70071",
+              "type": "stop"
+            },
+            {
+              "id": "70073",
+              "type": "stop"
+            },
+            {
+              "id": "70075",
+              "type": "stop"
+            },
+            {
+              "id": "70077",
+              "type": "stop"
+            },
+            {
+              "id": "70079",
+              "type": "stop"
+            },
+            {
+              "id": "70081",
+              "type": "stop"
+            },
+            {
+              "id": "70083",
+              "type": "stop"
+            },
+            {
+              "id": "70095",
+              "type": "stop"
+            },
+            {
+              "id": "70097",
+              "type": "stop"
+            },
+            {
+              "id": "70099",
+              "type": "stop"
+            },
+            {
+              "id": "70101",
+              "type": "stop"
+            },
+            {
+              "id": "70103",
+              "type": "stop"
+            },
+            {
+              "id": "70105",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "JFK/UMass"
+      },
+      "id": "70096",
+      "links": {
+        "self": "/stops/70096"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70096"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-jfk",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Shawmut"
+      },
+      "id": "70092",
+      "links": {
+        "self": "/stops/70092"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70092"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-smmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Park Street"
+      },
+      "id": "70075",
+      "links": {
+        "self": "/stops/70075"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70075"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-pktrm",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Andrew"
+      },
+      "id": "70084",
+      "links": {
+        "self": "/stops/70084"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70084"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-andrw",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "49258823-BroadwayJFK2",
+      "links": {
+        "self": "/trips/49258823-BroadwayJFK2"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-0_70081_70085_2",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0009-70081-70085-2",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70085",
+              "type": "stop"
+            },
+            {
+              "id": "70087",
+              "type": "stop"
+            },
+            {
+              "id": "70089",
+              "type": "stop"
+            },
+            {
+              "id": "70091",
+              "type": "stop"
+            },
+            {
+              "id": "70093",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Broadway - Alewife",
+        "sort_order": 10010199,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-1-1_70086_70082_2",
+      "links": {
+        "self": "/route_patterns/Red-1-1_70086_70082_2"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258737-BroadwayJFK2",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {},
+      "id": "49258909-BroadwayJFK2",
+      "links": {
+        "self": "/trips/49258909-BroadwayJFK2"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-1_70096_70082_2",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0010-70096-70082-2",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70082",
+              "type": "stop"
+            },
+            {
+              "id": "70080",
+              "type": "stop"
+            },
+            {
+              "id": "70078",
+              "type": "stop"
+            },
+            {
+              "id": "70076",
+              "type": "stop"
+            },
+            {
+              "id": "70074",
+              "type": "stop"
+            },
+            {
+              "id": "70072",
+              "type": "stop"
+            },
+            {
+              "id": "70070",
+              "type": "stop"
+            },
+            {
+              "id": "70068",
+              "type": "stop"
+            },
+            {
+              "id": "70066",
+              "type": "stop"
+            },
+            {
+              "id": "70064",
+              "type": "stop"
+            },
+            {
+              "id": "70061",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Savin Hill"
+      },
+      "id": "70087",
+      "links": {
+        "self": "/stops/70087"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70087"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-shmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Harvard"
+      },
+      "id": "70067",
+      "links": {
+        "self": "/stops/70067"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70067"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-harsq",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Alewife - Broadway",
+        "sort_order": 10010099,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-3-0_70081_70095_0",
+      "links": {
+        "self": "/route_patterns/Red-3-0_70081_70095_0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258994-BroadwayJFK0",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Fields Corner"
+      },
+      "id": "70089",
+      "links": {
+        "self": "/stops/70089"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70089"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-fldcr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Central"
+      },
+      "id": "70070",
+      "links": {
+        "self": "/stops/70070"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70070"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-cntsq",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "49258909-BroadwayJFK0",
+      "links": {
+        "self": "/trips/49258909-BroadwayJFK0"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-1_70096_70082_0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0010-70096-70082-0",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70105",
+              "type": "stop"
+            },
+            {
+              "id": "70104",
+              "type": "stop"
+            },
+            {
+              "id": "70102",
+              "type": "stop"
+            },
+            {
+              "id": "70100",
+              "type": "stop"
+            },
+            {
+              "id": "70098",
+              "type": "stop"
+            },
+            {
+              "id": "70096",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Quincy Adams"
+      },
+      "id": "70103",
+      "links": {
+        "self": "/stops/70103"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70103"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-qamnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "South Station"
+      },
+      "id": "70080",
+      "links": {
+        "self": "/stops/70080"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70080"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-sstat",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Broadway"
+      },
+      "id": "70081",
+      "links": {
+        "self": "/stops/70081"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70081"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-brdwy",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "South Station"
+      },
+      "id": "70079",
+      "links": {
+        "self": "/stops/70079"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70079"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-sstat",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "JFK/UMass - Ashmont",
+        "sort_order": 10010099,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-1-0_70081_70085_2",
+      "links": {
+        "self": "/route_patterns/Red-1-0_70081_70085_2"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258823-BroadwayJFK2",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Quincy Adams"
+      },
+      "id": "70104",
+      "links": {
+        "self": "/stops/70104"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70104"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-qamnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Ashmont - JFK/UMass",
+        "sort_order": 10010199,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-1-1_70086_70082_0",
+      "links": {
+        "self": "/route_patterns/Red-1-1_70086_70082_0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258737-BroadwayJFK0",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Quincy Center"
+      },
+      "id": "70102",
+      "links": {
+        "self": "/stops/70102"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70102"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-qnctr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "48911678",
+      "links": {
+        "self": "/trips/48911678"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0010",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70105",
+              "type": "stop"
+            },
+            {
+              "id": "70104",
+              "type": "stop"
+            },
+            {
+              "id": "70102",
+              "type": "stop"
+            },
+            {
+              "id": "70100",
+              "type": "stop"
+            },
+            {
+              "id": "70098",
+              "type": "stop"
+            },
+            {
+              "id": "70096",
+              "type": "stop"
+            },
+            {
+              "id": "70084",
+              "type": "stop"
+            },
+            {
+              "id": "70082",
+              "type": "stop"
+            },
+            {
+              "id": "70080",
+              "type": "stop"
+            },
+            {
+              "id": "70078",
+              "type": "stop"
+            },
+            {
+              "id": "70076",
+              "type": "stop"
+            },
+            {
+              "id": "70074",
+              "type": "stop"
+            },
+            {
+              "id": "70072",
+              "type": "stop"
+            },
+            {
+              "id": "70070",
+              "type": "stop"
+            },
+            {
+              "id": "70068",
+              "type": "stop"
+            },
+            {
+              "id": "70066",
+              "type": "stop"
+            },
+            {
+              "id": "70064",
+              "type": "stop"
+            },
+            {
+              "id": "70061",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "North Quincy"
+      },
+      "id": "70097",
+      "links": {
+        "self": "/stops/70097"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70097"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-nqncy",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "JFK/UMass"
+      },
+      "id": "70086",
+      "links": {
+        "self": "/stops/70086"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70086"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-jfk",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Shawmut"
+      },
+      "id": "70091",
+      "links": {
+        "self": "/stops/70091"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70091"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-smmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "North Quincy"
+      },
+      "id": "70098",
+      "links": {
+        "self": "/stops/70098"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70098"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-nqncy",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Alewife - Braintree",
+        "sort_order": 10010005,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Red-3-0",
+      "links": {
+        "self": "/route_patterns/Red-3-0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "48911785",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Downtown Crossing"
+      },
+      "id": "70078",
+      "links": {
+        "self": "/stops/70078"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70078"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-dwnxg",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Kendall/MIT"
+      },
+      "id": "70072",
+      "links": {
+        "self": "/stops/70072"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70072"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-knncl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "Alewife - Broadway",
+        "sort_order": 10010099,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-1-0_70081_70085_0",
+      "links": {
+        "self": "/route_patterns/Red-1-0_70081_70085_0"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258823-BroadwayJFK0",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "Ashmont"
+      },
+      "id": "70093",
+      "links": {
+        "self": "/stops/70093"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70093"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-asmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Quincy Center"
+      },
+      "id": "70101",
+      "links": {
+        "self": "/stops/70101"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70101"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-qnctr",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Ashmont - Alewife",
+        "sort_order": 10010104,
+        "time_desc": null,
+        "typicality": 1
+      },
+      "id": "Red-1-1",
+      "links": {
+        "self": "/route_patterns/Red-1-1"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "48911462",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "name": "JFK/UMass"
+      },
+      "id": "70085",
+      "links": {
+        "self": "/stops/70085"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70085"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-jfk",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "48911462",
+      "links": {
+        "self": "/trips/48911462"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-1",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "FallWeekday",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0010",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70094",
+              "type": "stop"
+            },
+            {
+              "id": "70092",
+              "type": "stop"
+            },
+            {
+              "id": "70090",
+              "type": "stop"
+            },
+            {
+              "id": "70088",
+              "type": "stop"
+            },
+            {
+              "id": "70086",
+              "type": "stop"
+            },
+            {
+              "id": "70084",
+              "type": "stop"
+            },
+            {
+              "id": "70082",
+              "type": "stop"
+            },
+            {
+              "id": "70080",
+              "type": "stop"
+            },
+            {
+              "id": "70078",
+              "type": "stop"
+            },
+            {
+              "id": "70076",
+              "type": "stop"
+            },
+            {
+              "id": "70074",
+              "type": "stop"
+            },
+            {
+              "id": "70072",
+              "type": "stop"
+            },
+            {
+              "id": "70070",
+              "type": "stop"
+            },
+            {
+              "id": "70068",
+              "type": "stop"
+            },
+            {
+              "id": "70066",
+              "type": "stop"
+            },
+            {
+              "id": "70064",
+              "type": "stop"
+            },
+            {
+              "id": "70061",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Central"
+      },
+      "id": "70069",
+      "links": {
+        "self": "/stops/70069"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70069"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-cntsq",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "49258823-BroadwayJFK0",
+      "links": {
+        "self": "/trips/49258823-BroadwayJFK0"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-0_70081_70085_0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0009-70081-70085-0",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70061",
+              "type": "stop"
+            },
+            {
+              "id": "70063",
+              "type": "stop"
+            },
+            {
+              "id": "70065",
+              "type": "stop"
+            },
+            {
+              "id": "70067",
+              "type": "stop"
+            },
+            {
+              "id": "70069",
+              "type": "stop"
+            },
+            {
+              "id": "70071",
+              "type": "stop"
+            },
+            {
+              "id": "70073",
+              "type": "stop"
+            },
+            {
+              "id": "70075",
+              "type": "stop"
+            },
+            {
+              "id": "70077",
+              "type": "stop"
+            },
+            {
+              "id": "70079",
+              "type": "stop"
+            },
+            {
+              "id": "70081",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {},
+      "id": "49258737-BroadwayJFK0",
+      "links": {
+        "self": "/trips/49258737-BroadwayJFK0"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-1-1_70086_70082_0",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "931_0010-70086-70082-0",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70094",
+              "type": "stop"
+            },
+            {
+              "id": "70092",
+              "type": "stop"
+            },
+            {
+              "id": "70090",
+              "type": "stop"
+            },
+            {
+              "id": "70088",
+              "type": "stop"
+            },
+            {
+              "id": "70086",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "Wollaston"
+      },
+      "id": "70100",
+      "links": {
+        "self": "/stops/70100"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70100"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-wlsta",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "name": "Charles/MGH"
+      },
+      "id": "70073",
+      "links": {
+        "self": "/stops/70073"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70073"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-chmnl",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {},
+      "id": "49258994-BroadwayJFK2",
+      "links": {
+        "self": "/trips/49258994-BroadwayJFK2"
+      },
+      "relationships": {
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        },
+        "route_pattern": {
+          "data": {
+            "id": "Red-3-0_70081_70095_2",
+            "type": "route_pattern"
+          }
+        },
+        "service": {
+          "data": {
+            "id": "RTL421-hms41016-Sa-01",
+            "type": "service"
+          }
+        },
+        "shape": {
+          "data": {
+            "id": "933_0009-70081-70095-2",
+            "type": "shape"
+          }
+        },
+        "stops": {
+          "data": [
+            {
+              "id": "70095",
+              "type": "stop"
+            },
+            {
+              "id": "70097",
+              "type": "stop"
+            },
+            {
+              "id": "70099",
+              "type": "stop"
+            },
+            {
+              "id": "70101",
+              "type": "stop"
+            },
+            {
+              "id": "70103",
+              "type": "stop"
+            },
+            {
+              "id": "70105",
+              "type": "stop"
+            }
+          ]
+        }
+      },
+      "type": "trip"
+    },
+    {
+      "attributes": {
+        "name": "JFK/UMass"
+      },
+      "id": "70095",
+      "links": {
+        "self": "/stops/70095"
+      },
+      "relationships": {
+        "facilities": {
+          "links": {
+            "related": "/facilities/?filter[stop]=70095"
+          }
+        },
+        "parent_station": {
+          "data": {
+            "id": "place-jfk",
+            "type": "stop"
+          }
+        },
+        "zone": {
+          "data": {
+            "id": "RapidTransit",
+            "type": "zone"
+          }
+        }
+      },
+      "type": "stop"
+    },
+    {
+      "attributes": {
+        "direction_id": 0,
+        "name": "JFK/UMass - Braintree",
+        "sort_order": 10010099,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-3-0_70081_70095_2",
+      "links": {
+        "self": "/route_patterns/Red-3-0_70081_70095_2"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258994-BroadwayJFK2",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    },
+    {
+      "attributes": {
+        "direction_id": 1,
+        "name": "Broadway - Alewife",
+        "sort_order": 10010199,
+        "time_desc": null,
+        "typicality": 4
+      },
+      "id": "Red-3-1_70096_70082_2",
+      "links": {
+        "self": "/route_patterns/Red-3-1_70096_70082_2"
+      },
+      "relationships": {
+        "representative_trip": {
+          "data": {
+            "id": "49258909-BroadwayJFK2",
+            "type": "trip"
+          }
+        },
+        "route": {
+          "data": {
+            "id": "Red",
+            "type": "route"
+          }
+        }
+      },
+      "type": "route_pattern"
+    }
+  ],
+  "jsonapi": {
+    "version": "1.0"
+  }
+}
