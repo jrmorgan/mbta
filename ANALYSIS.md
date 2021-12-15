@@ -154,4 +154,8 @@ if switching between branches.
 After all of this, I've started to wonder if I needed the path objects at all, even though I thought I did. I did need to keep
 separate paths for the Red Line branches, otherwise I would have no idea what the actual longest path is - the longest path
 on the Red Line does not constitute of all the stops contained within. However, maybe I could have just represented it as a set
-of lists as I don't hold other information about them at this time. But I didn't want to lose the extensibility of the application either.
+of lists as I don't hold other information about them at this time. I didn't want to lose the extensibility of the application though,
+and then have to recreate an object. There's a reason the API has even more layers than I have created, as there are even more moving
+parts than I have used in this project.
+
+Thank you for reading.
