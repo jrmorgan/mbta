@@ -11,6 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * The MbtaMapper class takes in the JsonNode tree generated from the MbtaClient and parses it.
@@ -61,7 +62,10 @@ public class MbtaMapper {
                 JsonNode tripStops = node.at("/stops/data");
                 MbtaPath.PathBuilder pathBuilder = new MbtaPath.PathBuilder();
                 List<String> stopList = tripStops.findValuesAsText("id");
-                stopList.forEach(stop -> pathBuilder.addStop(stops.get(parentStations.get(stop))));
+                //changed from a `forEach` using `addStop`
+                pathBuilder.addStops(
+                        stopList.stream().map(stop ->
+                                stops.get(parentStations.get(stop))).collect(Collectors.toList()));
                 routeBuilder.addPath(pathBuilder.build());
             });
             allRoutes.add(routeBuilder.build());
@@ -80,16 +84,10 @@ public class MbtaMapper {
         }
 
         filterIncluded(included);
-
         Map<String, Set<String>> parentStationRoutes = new HashMap<>();
 
         trips.forEach((route, routeTrips) -> routeTrips.forEach(node -> {
-            JsonNode tripStops = node.at("/stops/data");
-            List<String> stopList = tripStops.findValuesAsText("id");
-
-
-
-
+            List<String> stopList = node.at("/stops/data").findValuesAsText("id");
             stopList.forEach(stop -> {
                 Set<String> parentRoutes = parentStationRoutes.computeIfAbsent(parentStations.get(stop), k -> new HashSet<>());
                 parentRoutes.add(route);
@@ -97,7 +95,6 @@ public class MbtaMapper {
         }));
 
         Map<String, MbtaStop> allStops = new HashMap<>();
-
         for (JsonNode node : stops) {
             String stopId = node.get("id").asText();
             String name = node.at("/attributes/name").asText();

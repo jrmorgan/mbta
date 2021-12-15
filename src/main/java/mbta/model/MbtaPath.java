@@ -49,6 +49,11 @@ public class MbtaPath {
             return this;
         }
 
+        public PathBuilder addStops(List<MbtaStop> stops) {
+            this.stops.addAll(stops);
+            return this;
+        }
+
         public MbtaPath build() {
             return new MbtaPath(this);
         }
