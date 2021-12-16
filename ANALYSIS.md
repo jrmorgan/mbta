@@ -81,11 +81,13 @@ features myself. That also goes along with holding the route ID rather than the 
 may not make much of a difference here since it's not like it's a query on a database with an index. I could have gone either way
 most likely.
 
-I also considered breaking out some of the logic from the `Mbta` object itself, and having it just contain the objects, rather than
-some of the methods performed - like the longest and shortest route calculations. Is that a job for the `Mbta` object itself, or is it
-up to the consumer to care and figure it out based on the object? Maybe if I had broken out the console interface into another class,
-it would have possibly made sense to have it do that calculation, but it didn't seem like it was the job of the main class to do that.
-Also, this keeps it more in line with OOP to calculate these items within the object.
+I thought about making the main App class do very little and make even one more class for the console UI. However, given the scope of the
+project, I thought maybe that was overkill. I also considered breaking out some of the logic from the `Mbta` object itself, and having 
+it just contain the objects, rather than some of the methods performed - like the longest and shortest route calculations. Is that a job 
+for the `Mbta` object itself, or is it up to the consumer to care and figure it out based on the object? Maybe if I had broken out the console 
+interface into another class, it would have possibly made sense to have it do that calculation as it could be considered presentation of
+the loaded data, but it didn't seem like it was the job of the main class to do that. Also, this keeps it more in line with OOP to calculate 
+these items within the object.
 
 #### Immutability
 
