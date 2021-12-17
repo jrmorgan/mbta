@@ -102,8 +102,8 @@ this from the top level when querying from the JSON - so why recreate the proble
 multiple times in a row. However, I considered what information I actually needed to make this calculation if I started with the stops. 
 I realized that I just needed the route names, rather than the objects, and thus attached a set of Strings which hold that information. 
 That allowed me to immutably create each stop and then build the paths, routes, and then the single Mbta object itself. I also could have 
-considered recalculating the stop to route information within the creation of the `Mbta` object, but I had already just done the same thing
-while parsing that it would have seemed redundant. I could consider passing in a map of the information to the `Mbta` object or something though, 
+considered recalculating the stop to route information within the creation of the `Mbta` object into a separate map, but I had already just done the same thing
+while parsing that it would have seemed redundant. I could consider passing in the map of the information to the `Mbta` object or something though, 
 allowing the `MbtaStop` information to be free of the link, but not sure that is the way to go either. I didn't love that I had to store several additional 
 objects in memory during the process since there was no other way to associate stops otherwise, especially when I was also trying to only create a 
 single stop object for those that occur on multiple routes (making Park Street, for instance, have 5 at least different JSON objects returned from 
