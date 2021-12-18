@@ -81,33 +81,37 @@ features myself. That also goes along with holding the route ID rather than the 
 may not make much of a difference here since it's not like it's a query on a database with an index. I could have gone either way
 most likely.
 
-I also considered breaking out some of the logic from the `Mbta` object itself, and having it just contain the objects, rather than
-some of the methods performed - like the longest and shortest route calculations. Is that a job for the `Mbta` object itself, or is it
-up to the consumer to care and figure it out based on the object? Maybe if I had broken out the console interface into another class,
-it would have possibly made sense to have it do that calculation, but it didn't seem like it was the job of the main class to do that.
-Also, this keeps it more in line with OOP to calculate these items within the object.
+I thought about making the main App class do very little and make even one more class for the console UI. However, given the scope of the
+project, I thought maybe that was overkill. I also considered breaking out some of the logic from the `Mbta` object itself, and having 
+it just contain the objects, rather than some of the methods performed - like the longest and shortest route calculations. Is that a job 
+for the `Mbta` object itself, or is it up to the consumer to care and figure it out based on the object? Maybe if I had broken out the console 
+interface into another class, it would have possibly made sense to have it do that calculation as it could be considered presentation of
+the loaded data, but it didn't seem like it was the job of the main class to do that. Also, this keeps it more in line with OOP to calculate 
+these items within the object.
 
 #### Immutability
 
 Trying to keep with the general principle of creating classes that are as immutable as possible, I worked to achieve that
 within this program. The various objects created from the query have no reason to change anyway, and the subsequent requirements
 of the program required only reading from and analyzing them. The builder pattern worked great for the routes and paths, as
-I added paths and stops, respectively, to each, but it made more sense to just make a factory method to create the stops,
-as I didn't need to add additional items to them at creation time. However, this created a challenge as I had intended to
-be able to have bidirectional links to be able to get back to paths/routes from the stops easily to be able to find how two
-stops connect. After all, I saw what a pain it was to calculate this from the top level when querying from the JSON - so why
-recreate the problem, especially if calling the path calculation method multiple times in a row. However, I considered what
-information I actually needed to make this calculation if I started with the stops. I realized that I just needed the route
-names, rather than the objects, and thus attached a set of Strings which hold that information. That allowed me to immutably
-create each stop and then build the paths, routes, and then the single Mbta object itself. I didn't love that I had to store
-additional items in memory during the process since there was no other way to associate stops otherwise, especially when I was
-also trying to only create a single stop object for those that occur on multiple routes (making Park Street, for instance,
-have 5 at least different JSON objects returned from the query - Red, Green B, Green C, Green D, and Green E). Since it
-was easy enough to put together the route names in these cases before the creation of the route object, I then created the
-stop object with just that information, even though it required holding onto that information in memory in a different map
-until I knew I had gone through each route to check for duplicates. It also unfortunately forced me to cycle through the trips
-twice, once to find the routes for each stop, and then a second to create the `MbtaStop` object itself. However, that is still
-a `O(n)` operation as it is still a fixed number of loops.
+I added paths and stops, respectively, to each, but left a standard constructor for the stops. I also then refactored to allow
+all stops to be added in a list to the path to work better with the stream paradigm, rather than relying on side effects.
+However, the whole thing created a challenge as I had intended to be able to have bidirectional links to be able to get back 
+to paths/routes from the stops easily to be able to find how two stops connect. After all, I saw what a pain it was to calculate 
+this from the top level when querying from the JSON - so why recreate the problem, especially if calling the path calculation method
+multiple times in a row. However, I considered what information I actually needed to make this calculation if I started with the stops. 
+I realized that I just needed the route names, rather than the objects, and thus attached a set of Strings which hold that information. 
+That allowed me to immutably create each stop and then build the paths, routes, and then the single Mbta object itself. I also could have 
+considered recalculating the stop to route information within the creation of the `Mbta` object into a separate map, but I had already just done the same thing
+while parsing that it would have seemed redundant. I could consider passing in the map of the information to the `Mbta` object or something though, 
+allowing the `MbtaStop` information to be free of the link, but not sure that is the way to go either. I didn't love that I had to store several additional 
+objects in memory during the process since there was no other way to associate stops otherwise, especially when I was also trying to only create a 
+single stop object for those that occur on multiple routes (making Park Street, for instance, have 5 at least different JSON objects returned from 
+the query - Red, Green B, Green C, Green D, and Green E). Since it was easy enough to put together the route names in these cases before the creation
+of the route object, I then created thestop object with just that information, even though it required holding onto that information in memory in a 
+different map until I knew I had gone through each route to check for duplicates. It also unfortunately forced me to cycle through the trips
+twice, once to find the routes for each stop, and then a second to create the `MbtaStop` object itself. However, that is still a `O(n)` operation 
+as it is still a fixed number of loops.
 
 #### Search Algorithm for Finding the Path
 

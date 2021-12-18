@@ -7,7 +7,7 @@ managed with Maven.
 
 #### Install and Run
 
-The full package with dependencies bundled can be used via `maven package`. The `jar` can then be run from the command line
+The full package with dependencies bundled can be used via `mvn package`. The `jar` can then be run from the command line
 with `java -cp target/Mbta-1.0-SNAPSHOT-jar-with-dependencies.jar mbta.App`. Tests can be run on their own with `mvn test`.
 
 #### API Key
