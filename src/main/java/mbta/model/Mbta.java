@@ -52,22 +52,12 @@ public class Mbta {
     }
 
     private Map<String, Set<String>> createTransferMap() {
-        List<Set<String>> intersectionNames = findIntersections().stream().map(MbtaStop::getRouteNames).collect(Collectors.toList());
+        Set<String> routeNames = routes.stream().map(MbtaRoute::getRouteId).collect(Collectors.toSet());
+        Set<Set<String>> intersectionNames = findIntersections().stream().map(MbtaStop::getRouteNames).collect(Collectors.toSet());
 
-        Map<String, Set<String>> tempTransfers = new HashMap<>();
-
-
-        //intersectionNames.stream().flatMap(  ).collect(Collectors.toMap(Object::toString, route -> transfers))
-        //    routes.stream().collect(Collectors.toMap())
-        intersectionNames.forEach(routes -> {
-            routes.forEach(route -> {
-                Set<String> transfers = tempTransfers.computeIfAbsent(route, k -> new HashSet<>());
-                transfers.addAll(routes);
-            });
-        });
-
-        tempTransfers.forEach((route, transfers) -> transfers.removeIf(name -> name.equals(route)));
-        return tempTransfers;
+        return routeNames.stream().collect(Collectors.toMap(r -> r,
+                r -> intersectionNames.stream().filter(s -> s.contains(r))
+                        .flatMap(Set::stream).filter(s -> !s.equals(r)).collect(Collectors.toSet())));
     }
 
     private List<String> modifiedBFS(Set<String> firstRouteNames, Set<String> secondRouteNames) {
