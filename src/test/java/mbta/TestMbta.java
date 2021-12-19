@@ -22,7 +22,6 @@ class TestMbta {
     @Test
     void findLongestRoute() {
         MbtaRoute actual = mbta.findLongestRoute();
-        System.out.println(mbta);
         assertAll(
                 () -> assertEquals(TestMbtaRouteFixture.ORANGE_LINE, actual),
                 () -> assertEquals(20, actual.getLongestPath().size()));
