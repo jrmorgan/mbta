@@ -65,7 +65,7 @@ public class Mbta {
         List<String> routeNameList = new ArrayList<>();
         Queue<String> routesToCheck = new ArrayDeque<>(firstRouteNames);
         Map<String, List<String>> paths = firstRouteNames.stream()
-                .collect(Collectors.toMap(p -> p, route -> new ArrayList<>(List.of(route))));
+                .collect(Collectors.toMap(p -> p, route -> List.of(route)));
 
         List<String> checked = new ArrayList<>();
         while (!routesToCheck.isEmpty()) {
