@@ -2,6 +2,7 @@ package mbta.model;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * The Mbta class holds the entire subway system.
@@ -64,7 +65,7 @@ public class Mbta {
         List<String> routeNameList = new ArrayList<>();
         Queue<String> routesToCheck = new ArrayDeque<>(firstRouteNames);
         Map<String, List<String>> paths = firstRouteNames.stream()
-                .collect(Collectors.toMap(Object::toString, route -> new ArrayList<>(Arrays.asList(route))));
+                .collect(Collectors.toMap(p -> p, route -> new ArrayList<>(List.of(route))));
 
         List<String> checked = new ArrayList<>();
         while (!routesToCheck.isEmpty()) {
@@ -72,16 +73,12 @@ public class Mbta {
             List<String> curPath = paths.get(routeId);
             checked.add(routeId);
             if (!secondRouteNames.contains(routeId)) {
-                List<String> transfers = new ArrayList<>(transferMap.get(routeId));
-                for (String transfer : transfers) {
-                    if (!routesToCheck.contains(transfer) && !checked.contains(transfer)) {
-                        checked.add(transfer);
-                        routesToCheck.add(transfer);
-                        List<String> newPath = new ArrayList<>(curPath);
-                        newPath.add(transfer);
-                        paths.put(transfer, newPath);
-                    }
-                }
+                List<String> transfers = transferMap.get(routeId).stream()
+                        .filter(r -> !routesToCheck.contains(r) && !checked.contains(r)).collect(Collectors.toList());
+                checked.addAll(transfers);
+                routesToCheck.addAll(transfers);
+                paths.putAll(transfers.stream().collect(Collectors.toMap(t -> t,
+                        t -> Stream.concat(curPath.stream(), List.of(t).stream()).collect(Collectors.toList()))));
             } else {
                 return curPath;
             }
